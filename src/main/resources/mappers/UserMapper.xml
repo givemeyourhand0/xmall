@@ -182,7 +182,7 @@
     and answer=#{answer}
   </select>
   <update id="updatePasswordByUsername" parameterType="map">
-    UPDATE xmall
+    UPDATE xmall_user
     SET password=#{passwordNew},update_time=now()
     where username=#{username}
   </update>

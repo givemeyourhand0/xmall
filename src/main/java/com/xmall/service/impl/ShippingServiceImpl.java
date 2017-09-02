@@ -11,6 +11,7 @@ import com.xmall.pojo.User;
 import com.xmall.service.IShippingService;
 import com.xmall.vo.ShippingVo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
@@ -20,6 +21,7 @@ import java.util.Map;
 /**
  * Created by 72703 on 2017/8/6.
  */
+@Service("iShippingService")
 public class ShippingServiceImpl implements IShippingService {
 
     @Autowired

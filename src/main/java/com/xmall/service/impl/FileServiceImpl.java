@@ -22,8 +22,8 @@ public class FileServiceImpl implements IFileService {
 
     @Override
     public String upload(MultipartFile file, String path) {
-        String fileName = file.getName();
-        String fileExtensionName = fileName.substring(fileName.lastIndexOf('.'+1));
+        String fileName = file.getOriginalFilename();
+        String fileExtensionName = fileName.substring(fileName.lastIndexOf(".")+1);
         String uploadFileName = UUID.randomUUID().toString()+"."+fileExtensionName;
         logger.info("开始上传文件，上传文件名:{},上传路径:{},上传新文件名:{}",fileName,path,uploadFileName);
 

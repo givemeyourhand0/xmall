@@ -3,6 +3,7 @@ package com.xmall.dao;
 import com.sun.org.apache.xpath.internal.operations.Or;
 import com.xmall.pojo.Order;
 import com.xmall.vo.OrderVo;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,7 +20,7 @@ public interface OrderMapper {
 
     int updateByPrimaryKey(Order record);
 
-    Order selectByUserIdAndOrderNo(Integer userId,Long orderNo);
+    Order selectByUserIdAndOrderNo(@Param("userId")Integer userId,@Param("orderNo")Long orderNo);
 
     List<Order> selectByUserId(Integer userId);
 

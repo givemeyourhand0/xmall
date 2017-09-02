@@ -60,7 +60,7 @@ public class CategoryManageController {
 
     @RequestMapping("/set_category_name.do")
     @ResponseBody
-    public ServerResponse<String> setCategoryName(HttpSession session, String categoryNameNew, int categoryId){
+    public ServerResponse<String> setCategoryName(HttpSession session, String categoryName, int categoryId){
         User user = (User)session.getAttribute(Const.CURRENT_USER);
         //验证用户是否登陆
         if(user == null){
@@ -68,7 +68,7 @@ public class CategoryManageController {
         }
         //验证用户是否有权限
         if(iUserService.checkAdminRole(user).isSuccess()){
-            return iCategoryService.setCategoryName(categoryId,categoryNameNew);
+            return iCategoryService.setCategoryName(categoryId,categoryName);
         }
         return ServerResponse.createByErrorMessage("无管理员权限");
 

@@ -3,11 +3,12 @@ package com.xmall.service;
 import com.github.pagehelper.PageInfo;
 import com.xmall.common.ServerResponse;
 import com.xmall.pojo.Shipping;
-import com.xmall.vo.ShippingVo;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by 72703 on 2017/8/6.
  */
+@Service
 public interface IShippingService {
     ServerResponse add(Integer userId, Shipping shipping);
     ServerResponse delete(Integer userId, Integer shippingId);

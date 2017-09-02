@@ -1,6 +1,5 @@
 package com.xmall.controller.portal;
 
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageInfo;
 import com.xmall.common.Const;
 import com.xmall.common.ResponseCode;
@@ -8,11 +7,8 @@ import com.xmall.common.ServerResponse;
 import com.xmall.pojo.Shipping;
 import com.xmall.pojo.User;
 import com.xmall.service.IShippingService;
-import com.xmall.vo.ShippingVo;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
